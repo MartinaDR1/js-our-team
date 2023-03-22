@@ -1,0 +1,9 @@
+body{
+    background-color: burlywood;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.ms_card{
+    border-radius: 0 20px;
+    box-shadow: 5px 4px  rgb(189, 180, 180);
+}

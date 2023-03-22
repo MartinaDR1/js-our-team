@@ -34,6 +34,7 @@ const teams =[
 
 //Seleziono elemento della DOM
 const containerEl = document.querySelector('.container');
+const rowEl = document.querySelector('.row')
 /*MILESTONE 1:
 Stampare su console, per ogni membro del team, le informazioni di nome, ruolo e la stringa della foto*/
 
@@ -43,13 +44,21 @@ for(let i=0;i <teams.length;i++){
     console.log(member);
 
     const markup = `
-    <div class="col">
-        <div class="card">
+    <div class="col-4 g-3">
+        <div class="card border ms_card">
             <img src="${member.foto}" alt=""> 
+            <div class="card-body">
+                <h3>
+                    ${member.nome} 
+                </h3>
+                <p>
+                    ${member.ruolo}
+                </p>
+            </div>
         </div>
     </div>`
 
-    containerEl.innerHTML += markup
+    rowEl.innerHTML += markup
 }
 
 
