@@ -43,16 +43,21 @@ for(let i=0;i <teams.length;i++){
     const member= teams[i];
     console.log(member);
 
+    generateCard(member)
+}
+
+function generateCard (element){
+    
     const markup = `
     <div class="col-4 g-3">
         <div class="card border ms_card">
-            <img src="${member.foto}" alt=""> 
+            <img src="${element.foto}" alt=""> 
             <div class="card-body">
                 <h3>
-                    ${member.nome} 
+                    ${element.nome} 
                 </h3>
                 <p>
-                    ${member.ruolo}
+                    ${element.ruolo}
                 </p>
             </div>
         </div>
@@ -60,6 +65,4 @@ for(let i=0;i <teams.length;i++){
 
     rowEl.innerHTML += markup
 }
-
-
 
