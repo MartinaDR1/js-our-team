@@ -3,32 +3,32 @@ const teams =[
     {
         nome:'Wayne Barnett',
         ruolo:'Founder & CEO',
-        foto:'wayne-barnett-founder-ceo.jpg'
+        foto:'./assets/img/wayne-barnett-founder-ceo.jpg'
     },
     {
         nome:'Angela Caroll',
         ruolo:'Chief Editor',
-        foto:'angela-caroll-chief-editor.jpg'
+        foto:'./assets/img/angela-caroll-chief-editor.jpg'
     },
     {
         nome:'Walter Gordon',
         ruolo:'Office Manager',
-        foto:'walter-gordon-office-manager.jpg'
+        foto:'./assets/img/walter-gordon-office-manager.jpg'
     },
     {
         nome:'Angela Lopez',
         ruolo:'Social Media Manager',
-        foto:'angela-lopez-social-media-manager.jpg'
+        foto:'./assets/img/angela-lopez-social-media-manager.jpg'
     },
     {
         nome:'Scott Estrada',
         ruolo:'Developer',
-        foto:'scott-estrada-developer.jpg'
+        foto:'./assets/img/scott-estrada-developer.jpg'
     },
     {
         nome:'Barbara Ramos',
         ruolo:'Graphic Designer',
-        foto:'barbara-ramos-graphic-designer.jpg'
+        foto:'./assets/img/barbara-ramos-graphic-designer.jpg'
     } 
 ]
 
@@ -40,9 +40,16 @@ Stampare su console, per ogni membro del team, le informazioni di nome, ruolo e 
 //Ciclo all'interno dell'array 
 for(let i=0;i <teams.length;i++){
     const member= teams[i];
+    console.log(member);
 
-    containerEl.innerHTML +=` ${member.nome} ${member.ruolo} ${member.foto}`
-    console.log(member.nome, member.ruolo, member.foto);
+    const markup = `
+    <div class="col">
+        <div class="card">
+            <img src="${member.foto}" alt=""> 
+        </div>
+    </div>`
+
+    containerEl.innerHTML += markup
 }
 
 
