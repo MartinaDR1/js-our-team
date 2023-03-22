@@ -32,11 +32,18 @@ const teams =[
     } 
 ]
 
+//Seleziono elemento della DOM
+const containerEl = document.querySelector('.container');
 /*MILESTONE 1:
 Stampare su console, per ogni membro del team, le informazioni di nome, ruolo e la stringa della foto*/
 
 //Ciclo all'interno dell'array 
 for(let i=0;i <teams.length;i++){
     const member= teams[i];
+
+    containerEl.innerHTML +=` ${member.nome} ${member.ruolo} ${member.foto}`
     console.log(member.nome, member.ruolo, member.foto);
 }
+
+
+
